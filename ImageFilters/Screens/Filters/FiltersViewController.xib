@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FiltersViewController" customModule="ImageFilters" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="34b-cg-qwp" id="jej-n8-iIE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,21 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI7-e9-jP1">
-                    <rect key="frame" x="137" y="518" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="applyFilter:" destination="-1" eventType="touchUpInside" id="0yf-TO-tm2"/>
-                    </connections>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="34b-cg-qwp">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ZI7-e9-jP1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GZ8-VD-oBz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZI7-e9-jP1" secondAttribute="bottom" constant="20" id="rCM-jv-WnI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="34b-cg-qwp" secondAttribute="trailing" id="5sr-Ns-SB3"/>
+                <constraint firstItem="34b-cg-qwp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9eM-d2-vt9"/>
+                <constraint firstItem="34b-cg-qwp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Oo1-h3-HOe"/>
+                <constraint firstAttribute="bottom" secondItem="34b-cg-qwp" secondAttribute="bottom" id="fnz-1y-xUz"/>
             </constraints>
-            <point key="canvasLocation" x="141" y="138"/>
+            <point key="canvasLocation" x="140.625" y="137.32394366197184"/>
         </view>
     </objects>
     <resources>
