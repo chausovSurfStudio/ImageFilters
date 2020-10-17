@@ -41,7 +41,7 @@ class PhotoViewController: UIViewController {
 
         filterController.onFilterSelect = { [weak self] type in
             self?.dismiss(animated: true, completion: nil)
-            print(type)
+            self?.applyFilter(type: type)
         }
 
         present(navController, animated: true, completion: nil)
@@ -74,6 +74,11 @@ private extension PhotoViewController {
         shareButton.tintColor = Colors.buttonText
 
         imageView.contentMode = .scaleAspectFit
+    }
+
+    func applyFilter(type: FilterType) {
+        let image = originalImage.addFilter(type: type)
+        imageView.image = image
     }
 
 }

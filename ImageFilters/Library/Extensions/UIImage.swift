@@ -24,4 +24,21 @@ extension UIImage {
         self.init(cgImage: cgImage)
     }
 
+    func addFilter(type: FilterType) -> UIImage? {
+        guard let filter = CIFilter(name: type.rawValue) else {
+            return nil
+        }
+        let ciInput = CIImage(image: self)
+        filter.setValue(ciInput, forKey: "inputImage")
+
+        let ciContext = CIContext()
+        guard
+            let ciOutput = filter.outputImage,
+            let cgImage = ciContext.createCGImage(ciOutput, from: ciOutput.extent)
+        else {
+            return nil
+        }
+        return UIImage(cgImage: cgImage)
+    }
+
 }
