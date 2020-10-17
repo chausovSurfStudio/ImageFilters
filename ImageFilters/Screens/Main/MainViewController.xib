@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="ImageFilters" customModuleProvider="target">
             <connections>
+                <outlet property="startButton" destination="5Ak-RS-QDl" id="Qvm-s0-SYJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

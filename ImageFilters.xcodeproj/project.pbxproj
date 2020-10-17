@@ -18,6 +18,7 @@
 		90C7C344253B464800DFADAC /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C7C342253B464800DFADAC /* FiltersViewController.xib */; };
 		90C7C353253B46B500DFADAC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C351253B46B500DFADAC /* PhotoViewController.swift */; };
 		90C7C354253B46B500DFADAC /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C7C352253B46B500DFADAC /* PhotoViewController.xib */; };
+		90C7C35A253B48CC00DFADAC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C359253B48CC00DFADAC /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		90C7C342253B464800DFADAC /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
 		90C7C351253B46B500DFADAC /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		90C7C352253B46B500DFADAC /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		90C7C359253B48CC00DFADAC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		90C7C309253B447D00DFADAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				90C7C359253B48CC00DFADAC /* Colors.swift */,
 				90C7C2C5253B420200DFADAC /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90C7C2BD253B420100DFADAC /* AppDelegate.swift in Sources */,
+				90C7C35A253B48CC00DFADAC /* Colors.swift in Sources */,
 				90C7C353253B46B500DFADAC /* PhotoViewController.swift in Sources */,
 				90C7C343253B464800DFADAC /* FiltersViewController.swift in Sources */,
 				90C7C319253B44D400DFADAC /* MainViewController.swift in Sources */,
