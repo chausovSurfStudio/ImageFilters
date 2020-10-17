@@ -15,6 +15,10 @@ class FiltersViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
 
+    private let filters = FilterType.allCases
+
+    var onFilterSelect: ((FilterType) -> Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAppearance()
@@ -27,14 +31,14 @@ class FiltersViewController: UIViewController {
 extension FiltersViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return filters.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.identifier) else {
             return UITableViewCell()
         }
-        cell.textLabel?.text = "asd"
+        cell.textLabel?.text = filters[indexPath.row].name
         return cell
     }
 
@@ -43,6 +47,11 @@ extension FiltersViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension FiltersViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        onFilterSelect?(filters[indexPath.row])
+    }
 
 }
 

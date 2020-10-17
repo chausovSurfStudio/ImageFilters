@@ -21,6 +21,7 @@
 		90C7C35A253B48CC00DFADAC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C359253B48CC00DFADAC /* Colors.swift */; };
 		90C7C367253B530400DFADAC /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C366253B530400DFADAC /* UIImage.swift */; };
 		90C7C36C253B539700DFADAC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C36B253B539700DFADAC /* UIButton.swift */; };
+		90C7C375253B584800DFADAC /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C374253B584800DFADAC /* FilterType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		90C7C359253B48CC00DFADAC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		90C7C366253B530400DFADAC /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		90C7C36B253B539700DFADAC /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		90C7C374253B584800DFADAC /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				90C7C365253B52F900DFADAC /* Extensions */,
+				90C7C373253B583C00DFADAC /* Models */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -208,6 +211,14 @@
 				90C7C366253B530400DFADAC /* UIImage.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		90C7C373253B583C00DFADAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90C7C374253B584800DFADAC /* FilterType.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +356,7 @@
 				90C7C2BD253B420100DFADAC /* AppDelegate.swift in Sources */,
 				90C7C35A253B48CC00DFADAC /* Colors.swift in Sources */,
 				90C7C353253B46B500DFADAC /* PhotoViewController.swift in Sources */,
+				90C7C375253B584800DFADAC /* FilterType.swift in Sources */,
 				90C7C367253B530400DFADAC /* UIImage.swift in Sources */,
 				90C7C36C253B539700DFADAC /* UIButton.swift in Sources */,
 				90C7C343253B464800DFADAC /* FiltersViewController.swift in Sources */,

@@ -36,7 +36,14 @@ class PhotoViewController: UIViewController {
     }
 
     @IBAction private func chooseFilter(_ sender: Any) {
-        let navController = UINavigationController(rootViewController: FiltersViewController())
+        let filterController = FiltersViewController()
+        let navController = UINavigationController(rootViewController: filterController)
+
+        filterController.onFilterSelect = { [weak self] type in
+            self?.dismiss(animated: true, completion: nil)
+            print(type)
+        }
+
         present(navController, animated: true, completion: nil)
     }
 
