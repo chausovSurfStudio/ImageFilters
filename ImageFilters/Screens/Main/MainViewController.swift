@@ -21,7 +21,25 @@ class MainViewController: UIViewController {
     }
 
     @IBAction private func choosePhoto(_ sender: Any) {
-        let vc = PhotoViewController()
+        let pickerVC = UIImagePickerController()
+        pickerVC.delegate = self
+        pickerVC.sourceType = .photoLibrary
+        present(pickerVC, animated: true, completion: nil)
+    }
+
+}
+
+// MARK: - UIImagePickerControllerDelegate
+
+extension MainViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[.originalImage] as? UIImage else {
+            return
+        }
+        let vc = PhotoViewController(image: image)
         navigationController?.pushViewController(vc, animated: true)
     }
 
