@@ -14,6 +14,9 @@ class PhotoViewController: UIViewController {
     @IBOutlet private weak var shareButton: UIButton!
     @IBOutlet private weak var imageView: UIImageView!
 
+    @IBOutlet private weak var indicatorContainerView: UIView!
+    @IBOutlet private weak var indicatorView: UIActivityIndicatorView!
+
     private let originalImage: UIImage
 
     init(image: UIImage) {
@@ -74,11 +77,32 @@ private extension PhotoViewController {
         shareButton.tintColor = Colors.buttonText
 
         imageView.contentMode = .scaleAspectFit
+
+        indicatorContainerView.backgroundColor = Colors.buttonBackground
+        indicatorContainerView.layer.cornerRadius = 5
+        indicatorView.color = Colors.buttonText
+        stopIndicator()
     }
 
     func applyFilter(type: FilterType) {
-        let image = originalImage.addFilter(type: type)
-        imageView.image = image
+        startIndicator()
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            let image = self?.originalImage.addFilter(type: type)
+            DispatchQueue.main.async { [weak self] in
+                self?.imageView.image = image
+                self?.stopIndicator()
+            }
+        }
+    }
+
+    func startIndicator() {
+        indicatorContainerView.isHidden = false
+        indicatorView.startAnimating()
+    }
+
+    func stopIndicator() {
+        indicatorContainerView.isHidden = true
+        indicatorView.stopAnimating()
     }
 
 }

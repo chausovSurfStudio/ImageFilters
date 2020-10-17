@@ -25,6 +25,9 @@ extension UIImage {
     }
 
     func addFilter(type: FilterType) -> UIImage? {
+        guard type != .original else {
+            return self
+        }
         guard let filter = CIFilter(name: type.rawValue) else {
             return nil
         }

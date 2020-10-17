@@ -6,6 +6,7 @@
 //
 
 enum FilterType: String, CaseIterable {
+    case original = ""
     case chrome = "CIPhotoEffectChrome"
     case fade = "CIPhotoEffectFade"
     case instant = "CIPhotoEffectInstant"
@@ -17,6 +18,8 @@ enum FilterType: String, CaseIterable {
 
     var name: String {
         switch self {
+        case .original:
+            return "original"
         case .chrome:
             return "chrome"
         case .fade:

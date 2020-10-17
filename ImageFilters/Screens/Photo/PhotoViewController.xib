@@ -14,6 +14,8 @@
                 <outlet property="backButton" destination="jDe-LA-14l" id="aN5-EL-NaN"/>
                 <outlet property="chooseFilterButton" destination="TOx-YU-sM6" id="PJn-oc-vQC"/>
                 <outlet property="imageView" destination="WXT-KK-eZt" id="KVu-PV-2dd"/>
+                <outlet property="indicatorContainerView" destination="lY5-XY-aY0" id="egG-TC-1YE"/>
+                <outlet property="indicatorView" destination="tss-uz-eZQ" id="A0h-VM-1Y0"/>
                 <outlet property="shareButton" destination="NUE-zi-QZZ" id="ZI9-9o-scS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -51,6 +53,21 @@
                         <action selector="shareImage:" destination="-1" eventType="touchUpInside" id="vDZ-Sn-QFJ"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lY5-XY-aY0">
+                    <rect key="frame" x="135" y="259" width="50" height="50"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tss-uz-eZQ">
+                            <rect key="frame" x="6.5" y="6.5" width="37" height="37"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Unx-9m-tTd"/>
+                        <constraint firstItem="tss-uz-eZQ" firstAttribute="centerY" secondItem="lY5-XY-aY0" secondAttribute="centerY" id="bXW-gO-3oM"/>
+                        <constraint firstItem="tss-uz-eZQ" firstAttribute="centerX" secondItem="lY5-XY-aY0" secondAttribute="centerX" id="cyz-Pa-yT4"/>
+                        <constraint firstAttribute="height" constant="50" id="qby-xu-kUq"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,9 +78,11 @@
                 <constraint firstItem="TOx-YU-sM6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="49E-iV-ZOc"/>
                 <constraint firstItem="jDe-LA-14l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="AHi-6g-uyh"/>
                 <constraint firstItem="WXT-KK-eZt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GpF-GM-Ch7"/>
+                <constraint firstItem="lY5-XY-aY0" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="PLh-1x-qgl"/>
                 <constraint firstItem="WXT-KK-eZt" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Qxq-wg-hm0"/>
                 <constraint firstItem="WXT-KK-eZt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="S4r-dE-oP6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TOx-YU-sM6" secondAttribute="bottom" constant="20" id="Vau-8w-awT"/>
+                <constraint firstItem="lY5-XY-aY0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aP8-Nd-fGB"/>
                 <constraint firstItem="NUE-zi-QZZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="riH-fd-0PL"/>
             </constraints>
             <point key="canvasLocation" x="140.625" y="137.32394366197184"/>
