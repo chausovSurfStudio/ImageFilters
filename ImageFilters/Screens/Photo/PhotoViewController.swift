@@ -74,7 +74,7 @@ private extension PhotoViewController {
         chooseFilterButton.applyStyle()
         chooseFilterButton.setTitle("Выбрать фильтр", for: .normal)
 
-        shareButton.tintColor = Colors.buttonText
+        shareButton.tintColor = Colors.shareButton
 
         imageView.contentMode = .scaleAspectFit
 
