@@ -10,4 +10,5 @@ import UIKit
 enum Colors {
     static let background = UIColor.black
     static let buttonText = UIColor.white
+    static let buttonBackground = UIColor.white.withAlphaComponent(0.1)
 }

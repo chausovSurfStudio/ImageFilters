@@ -52,7 +52,7 @@ private extension MainViewController {
     func configureAppearance() {
         navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = Colors.background
-        startButton.setTitleColor(Colors.buttonText, for: .normal)
+        startButton.applyStyle()
         startButton.setTitle("Выбрать фото", for: .normal)
     }
 

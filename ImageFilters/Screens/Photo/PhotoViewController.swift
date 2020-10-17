@@ -9,6 +9,11 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 
+    @IBOutlet private weak var backButton: UIButton!
+    @IBOutlet private weak var chooseFilterButton: UIButton!
+    @IBOutlet private weak var shareButton: UIButton!
+    @IBOutlet private weak var imageView: UIImageView!
+
     private let originalImage: UIImage
 
     init(image: UIImage) {
@@ -22,6 +27,8 @@ class PhotoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureAppearance()
+        imageView.image = originalImage
     }
 
     @IBAction private func backPressed(_ sender: Any) {
@@ -31,6 +38,35 @@ class PhotoViewController: UIViewController {
     @IBAction private func chooseFilter(_ sender: Any) {
         let navController = UINavigationController(rootViewController: FiltersViewController())
         present(navController, animated: true, completion: nil)
+    }
+
+    @IBAction private func shareImage(_ sender: Any) {
+        guard let image = imageView.image else {
+            return
+        }
+        let activityVC = UIActivityViewController(activityItems: [image],
+                                                  applicationActivities: nil)
+        present(activityVC, animated: true, completion: nil)
+    }
+
+}
+
+// MARK: - Private Methods
+
+private extension PhotoViewController {
+
+    func configureAppearance() {
+        view.backgroundColor = Colors.background
+
+        backButton.applyStyle()
+        backButton.setTitle("Назад", for: .normal)
+
+        chooseFilterButton.applyStyle()
+        chooseFilterButton.setTitle("Выбрать фильтр", for: .normal)
+
+        shareButton.tintColor = Colors.buttonText
+
+        imageView.contentMode = .scaleAspectFit
     }
 
 }

@@ -19,6 +19,8 @@
 		90C7C353253B46B500DFADAC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C351253B46B500DFADAC /* PhotoViewController.swift */; };
 		90C7C354253B46B500DFADAC /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C7C352253B46B500DFADAC /* PhotoViewController.xib */; };
 		90C7C35A253B48CC00DFADAC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C359253B48CC00DFADAC /* Colors.swift */; };
+		90C7C367253B530400DFADAC /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C366253B530400DFADAC /* UIImage.swift */; };
+		90C7C36C253B539700DFADAC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C36B253B539700DFADAC /* UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		90C7C351253B46B500DFADAC /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		90C7C352253B46B500DFADAC /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		90C7C359253B48CC00DFADAC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		90C7C366253B530400DFADAC /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		90C7C36B253B539700DFADAC /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				90C7C308253B446100DFADAC /* Application */,
+				90C7C364253B52ED00DFADAC /* Library */,
 				90C7C309253B447D00DFADAC /* Resources */,
 				90C7C307253B445900DFADAC /* Screens */,
 			);
@@ -186,6 +191,23 @@
 				90C7C342253B464800DFADAC /* FiltersViewController.xib */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		90C7C364253B52ED00DFADAC /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				90C7C365253B52F900DFADAC /* Extensions */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		90C7C365253B52F900DFADAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				90C7C36B253B539700DFADAC /* UIButton.swift */,
+				90C7C366253B530400DFADAC /* UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +345,8 @@
 				90C7C2BD253B420100DFADAC /* AppDelegate.swift in Sources */,
 				90C7C35A253B48CC00DFADAC /* Colors.swift in Sources */,
 				90C7C353253B46B500DFADAC /* PhotoViewController.swift in Sources */,
+				90C7C367253B530400DFADAC /* UIImage.swift in Sources */,
+				90C7C36C253B539700DFADAC /* UIButton.swift in Sources */,
 				90C7C343253B464800DFADAC /* FiltersViewController.swift in Sources */,
 				90C7C319253B44D400DFADAC /* MainViewController.swift in Sources */,
 			);

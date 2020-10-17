@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoViewController" customModule="ImageFilters" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="jDe-LA-14l" id="aN5-EL-NaN"/>
+                <outlet property="chooseFilterButton" destination="TOx-YU-sM6" id="PJn-oc-vQC"/>
+                <outlet property="imageView" destination="WXT-KK-eZt" id="KVu-PV-2dd"/>
+                <outlet property="shareButton" destination="NUE-zi-QZZ" id="ZI9-9o-scS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,6 +23,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WXT-KK-eZt">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOx-YU-sM6">
                     <rect key="frame" x="137" y="518" width="46" height="30"/>
                     <state key="normal" title="Button"/>
@@ -33,19 +40,37 @@
                         <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="waK-tD-jCe"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUE-zi-QZZ">
+                    <rect key="frame" x="260" y="15" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Vld-Vh-FiU"/>
+                        <constraint firstAttribute="width" constant="44" id="jha-8i-CBr"/>
+                    </constraints>
+                    <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                    <connections>
+                        <action selector="shareImage:" destination="-1" eventType="touchUpInside" id="vDZ-Sn-QFJ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="WXT-KK-eZt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0Kk-Su-FrP"/>
                 <constraint firstItem="jDe-LA-14l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="1RP-cN-WmK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NUE-zi-QZZ" secondAttribute="trailing" constant="16" id="3Eg-86-57S"/>
                 <constraint firstItem="TOx-YU-sM6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="49E-iV-ZOc"/>
                 <constraint firstItem="jDe-LA-14l" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="AHi-6g-uyh"/>
+                <constraint firstItem="WXT-KK-eZt" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="GpF-GM-Ch7"/>
+                <constraint firstItem="WXT-KK-eZt" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Qxq-wg-hm0"/>
+                <constraint firstItem="WXT-KK-eZt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="S4r-dE-oP6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TOx-YU-sM6" secondAttribute="bottom" constant="20" id="Vau-8w-awT"/>
+                <constraint firstItem="NUE-zi-QZZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="riH-fd-0PL"/>
             </constraints>
-            <point key="canvasLocation" x="141" y="138"/>
+            <point key="canvasLocation" x="140.625" y="137.32394366197184"/>
         </view>
     </objects>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
