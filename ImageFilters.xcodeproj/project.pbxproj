@@ -14,6 +14,10 @@
 		90C7C2DF253B420200DFADAC /* ImageFiltersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C2DE253B420200DFADAC /* ImageFiltersUITests.swift */; };
 		90C7C319253B44D400DFADAC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C317253B44D400DFADAC /* MainViewController.swift */; };
 		90C7C31A253B44D400DFADAC /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C7C318253B44D400DFADAC /* MainViewController.xib */; };
+		90C7C343253B464800DFADAC /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C341253B464800DFADAC /* FiltersViewController.swift */; };
+		90C7C344253B464800DFADAC /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C7C342253B464800DFADAC /* FiltersViewController.xib */; };
+		90C7C353253B46B500DFADAC /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7C351253B46B500DFADAC /* PhotoViewController.swift */; };
+		90C7C354253B46B500DFADAC /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C7C352253B46B500DFADAC /* PhotoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		90C7C2E0253B420200DFADAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C7C317253B44D400DFADAC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		90C7C318253B44D400DFADAC /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		90C7C341253B464800DFADAC /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		90C7C342253B464800DFADAC /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
+		90C7C351253B46B500DFADAC /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		90C7C352253B46B500DFADAC /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,8 @@
 		90C7C307253B445900DFADAC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				90C7C340253B463700DFADAC /* Filters */,
+				90C7C335253B460E00DFADAC /* Photo */,
 				90C7C316253B44C300DFADAC /* Main */,
 			);
 			path = Screens;
@@ -155,6 +165,24 @@
 				90C7C318253B44D400DFADAC /* MainViewController.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		90C7C335253B460E00DFADAC /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				90C7C351253B46B500DFADAC /* PhotoViewController.swift */,
+				90C7C352253B46B500DFADAC /* PhotoViewController.xib */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		90C7C340253B463700DFADAC /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				90C7C341253B464800DFADAC /* FiltersViewController.swift */,
+				90C7C342253B464800DFADAC /* FiltersViewController.xib */,
+			);
+			path = Filters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				90C7C2C9253B420200DFADAC /* LaunchScreen.storyboard in Resources */,
+				90C7C354253B46B500DFADAC /* PhotoViewController.xib in Resources */,
 				90C7C31A253B44D400DFADAC /* MainViewController.xib in Resources */,
+				90C7C344253B464800DFADAC /* FiltersViewController.xib in Resources */,
 				90C7C2C6253B420200DFADAC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +318,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				90C7C2BD253B420100DFADAC /* AppDelegate.swift in Sources */,
+				90C7C353253B46B500DFADAC /* PhotoViewController.swift in Sources */,
+				90C7C343253B464800DFADAC /* FiltersViewController.swift in Sources */,
 				90C7C319253B44D400DFADAC /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="ImageFilters" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FiltersViewController" customModule="ImageFilters" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,21 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ak-RS-QDl">
-                    <rect key="frame" x="137" y="269" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI7-e9-jP1">
+                    <rect key="frame" x="137" y="518" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                     <connections>
-                        <action selector="choosePhoto:" destination="-1" eventType="touchUpInside" id="SYJ-MG-WOm"/>
+                        <action selector="applyFilter:" destination="-1" eventType="touchUpInside" id="0yf-TO-tm2"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="5Ak-RS-QDl" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="P6e-z6-iye"/>
-                <constraint firstItem="5Ak-RS-QDl" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="xQm-6a-Y2R"/>
+                <constraint firstItem="ZI7-e9-jP1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GZ8-VD-oBz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZI7-e9-jP1" secondAttribute="bottom" constant="20" id="rCM-jv-WnI"/>
             </constraints>
-            <point key="canvasLocation" x="55" y="138"/>
+            <point key="canvasLocation" x="141" y="138"/>
         </view>
     </objects>
     <resources>

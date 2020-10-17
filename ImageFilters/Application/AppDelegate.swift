@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func initializeRootView() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MainViewController()
+        let navController = UINavigationController(rootViewController: MainViewController())
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }
 
