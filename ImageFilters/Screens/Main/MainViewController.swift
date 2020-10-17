@@ -16,10 +16,6 @@ class MainViewController: UIViewController {
         configureAppearance()
     }
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     @IBAction private func choosePhoto(_ sender: Any) {
         let pickerVC = UIImagePickerController()
         pickerVC.delegate = self
