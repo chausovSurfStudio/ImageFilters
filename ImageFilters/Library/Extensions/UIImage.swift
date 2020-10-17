@@ -44,4 +44,17 @@ extension UIImage {
         return UIImage(cgImage: cgImage)
     }
 
+    func fixOrientation() -> UIImage? {
+        guard self.imageOrientation != .up else {
+            return self
+        }
+
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        self.draw(in: .init(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return normalizedImage
+    }
+
 }

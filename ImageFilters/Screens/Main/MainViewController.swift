@@ -36,10 +36,13 @@ extension MainViewController: UIImagePickerControllerDelegate & UINavigationCont
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        guard let image = info[.originalImage] as? UIImage else {
+        guard
+            let image = info[.originalImage] as? UIImage,
+            let normalizedImage = image.fixOrientation()
+        else {
             return
         }
-        let vc = PhotoViewController(image: image)
+        let vc = PhotoViewController(image: normalizedImage)
         navigationController?.pushViewController(vc, animated: true)
     }
 
